@@ -6,6 +6,7 @@ import { CiCircleCheck } from "react-icons/ci";
 import { FaRegCalendarCheck, FaRegCalendarPlus } from "react-icons/fa";
 import { FaCirclePlus, FaFireFlameCurved, FaLocationDot } from "react-icons/fa6";
 import { ClipLoader } from 'react-spinners';
+import Error from './../components/error';
 
 interface DetailPageProps {
   params: Promise<{ id: string }>;
@@ -31,7 +32,7 @@ const GetOppsById: React.FC<DetailPageProps> = ({ params }) => {
         <div className="loader border-4 border-gray-200 border-t-blue-500 rounded-full w-10 h-10 animate-spin mt-[20%]">{isLoading && <ClipLoader color="#36D7B7" size={50} />}</div>
     </div>);
 
-  if (isError) return <p>Error loading opportunity</p>;
+  if (isError) return (<div><Error/></div>);
 
   	const responsibilities = data?.data.responsibilities.split(".").filter((j) => j.trim() !== "");
 	const ideal_Candidate = data?.data.idealCandidate.split(".").filter((c) => c.trim() !== "");

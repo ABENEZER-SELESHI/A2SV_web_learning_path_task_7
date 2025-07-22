@@ -1,6 +1,7 @@
 //app/ui/JobCard.tsx
-import React from 'react'
-import JobCardButton from './JobCardButton'
+import React from 'react';
+import JobCardButton from './JobCardButton';
+
 
 interface JobType {
     icon?: string

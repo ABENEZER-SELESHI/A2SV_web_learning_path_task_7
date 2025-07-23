@@ -6,7 +6,7 @@ import { CiCircleCheck } from "react-icons/ci";
 import { FaRegCalendarCheck, FaRegCalendarPlus } from "react-icons/fa";
 import { FaCirclePlus, FaFireFlameCurved, FaLocationDot } from "react-icons/fa6";
 import { ClipLoader } from 'react-spinners';
-import Error from './../components/error';
+import Error from '../components/error';
 
 interface DetailPageProps {
   params: Promise<{ id: string }>;
